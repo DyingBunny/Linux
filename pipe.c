@@ -23,6 +23,7 @@ int main()
     }
     
     pid=fork();
+	
     if(pid<0)
     {
 	sys_err("fork err");
@@ -41,5 +42,6 @@ int main()
 	wait(NULL);
 	close(fd[1]);
     }
+	
     return 0;
 }
